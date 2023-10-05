@@ -15,7 +15,7 @@ var country2 = {
     population: "17 million"
 }
 var country3 = {
-    name: "United States",
+    name: "Usa",
     capital: "Washington D.C",
     population: "330 million"
 }
@@ -46,7 +46,8 @@ selectBtn.addEventListener("click", function(){
     capitalizeFirstLetter()
     for(var i = 0; i < countries.length; i++){
         if(userInput.value == countries[i].name){
-            data.innerHTML = countries[i].name + '<br>' + " population: "+ countries[i].population
+            data.innerHTML = countries[i].name + '<br>' + '<br>' + " Population: "+ countries[i].population + '<br>' + '<br>'
+            + "Capital: " + countries[i].capital
         }
     }
 })
@@ -54,7 +55,7 @@ selectBtn.addEventListener("click", function(){
 deleteBtn.addEventListener("click", function(){
     capitalizeFirstLetter()
     var i = 0
-    while(i<countries.length){
+    while(i < countries.length){
         if(userInput.value == countries[i].name){
             countries.splice(i, 1)
         }
